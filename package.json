@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "cream:build": "lerna exec --scope cream -- yarn build",
+    "cream:link": "lerna exec --scope cream -- yarn npm:link",
+    "cream:unlink": "lerna exec --scope cream -- yarn npm:unlink",
+    "cream:build:link": "lerna exec --scope cream -- yarn build:link"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

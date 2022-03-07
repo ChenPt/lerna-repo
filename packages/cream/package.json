@@ -1,0 +1,52 @@
+{
+  "name": "cream",
+  "version": "0.0.1",
+  "description": "cli工具库",
+  "keywords": [
+    "cli",
+    "utils"
+  ],
+  "author": "ChenPt <847136903@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/bin/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "bin": {
+    "cream": "./lib/bin/index.js"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc --outDir ./lib -d",
+    "build:link": "npm unlink && rm -rf /lib && tsc --outDir ./lib -d && npm link",
+    "npm:link": "npm link",
+    "npm:unlink": "npm unlink"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChenPt/lerna-repo.git",
+    "directory": "packages/cream"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^8.2.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^14.18.0",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.13",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "chalk": "4.0.0",
+    "commander": "^9.0.0",
+    "inquirer": "^8.2.0"
+  }
+}
